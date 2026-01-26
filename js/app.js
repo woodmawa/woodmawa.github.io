@@ -3,7 +3,7 @@ const projectCategories = {
     'Core Libraries': [
         {
             name: 'grooy-HttpClient',
-            repo: 'core-lib',
+            repo: 'groovy-HttpClient',
             description: 'java 25 + virtual threads, groovy http client with DSL and test framework ',
             features: [
                 'Java 21+ (compiled on Java 25)  ',
