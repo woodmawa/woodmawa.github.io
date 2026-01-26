@@ -22,28 +22,77 @@
 <nav>
     <div class="container">
         <ul class="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+            <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
             <li><a href="https://github.com/woodmawa" target="_blank">GitHub</a></li>
         </ul>
     </div>
 </nav>
 
 <main class="container">
-    <section id="home" class="intro">
-        <h2>Welcome to Softwood Consulting</h2>
-        <p>
-            Explore our collection of open source projects built with Groovy and other modern technologies.
-            Each project is designed to solve real-world problems with elegant, maintainable code.
-        </p>
-        <p>
-            All projects are freely available on <a href="https://github.com/woodmawa" target="_blank">GitHub</a>
-            under open source licenses. Contributions and feedback are always welcome!
-        </p>
+    <!-- Home Page -->
+    <section id="home-page" class="page active">
+        <div class="banner-container">
+            <img src="./images/banner-image.png" alt="Softwood Consulting Banner" class="banner-image">
+        </div>
+
+        <div class="intro">
+            <h2>About Softwood Consulting</h2>
+            <p>
+                Softwood Consulting specializes in building elegant, maintainable open source solutions
+                using Groovy and modern JVM technologies. We believe in the power of open source software
+                to solve real-world problems while fostering collaboration and innovation.
+            </p>
+
+            <h3>What We Do</h3>
+            <div class="services">
+                <div class="service-card">
+                    <h4>🚀 Open Source Development</h4>
+                    <p>Creating high-quality libraries, frameworks, and tools that empower developers to build better software faster.</p>
+                </div>
+
+                <div class="service-card">
+                    <h4>💻 Groovy Expertise</h4>
+                    <p>Leveraging Groovy's dynamic capabilities and Java interoperability to create powerful, concise solutions.</p>
+                </div>
+
+                <div class="service-card">
+                    <h4>🔧 Modern JVM Tools</h4>
+                    <p>Embracing cutting-edge JVM features like virtual threads, records, and pattern matching for optimal performance.</p>
+                </div>
+
+                <div class="service-card">
+                    <h4>📚 Documentation & Support</h4>
+                    <p>Comprehensive documentation, examples, and community support for all our projects.</p>
+                </div>
+            </div>
+
+            <h3>Our Approach</h3>
+            <p>
+                Every project we create is designed with clarity, maintainability, and real-world usability in mind.
+                We focus on solving genuine problems that developers face, backed by solid engineering principles
+                and thorough testing.
+            </p>
+
+            <p>
+                All our projects are freely available on <a href="https://github.com/woodmawa" target="_blank">GitHub</a>
+                under open source licenses. We welcome contributions, feedback, and collaboration from the community.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-large" data-page="projects">Explore Our Projects</a>
+                <a href="https://github.com/woodmawa" target="_blank" class="btn btn-secondary btn-large">Visit Our GitHub</a>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
+    <!-- Projects Page -->
+    <section id="projects-page" class="page">
         <h2>Featured Projects</h2>
+        <p class="page-description">
+            Explore our collection of open source projects. Each project includes detailed documentation,
+            examples, and active maintenance. Click on any category to learn more.
+        </p>
         <div id="projectsContainer" class="loading">
             <p>Loading projects from GitHub...</p>
         </div>
