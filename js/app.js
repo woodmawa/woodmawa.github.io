@@ -1,48 +1,3 @@
-// Page navigation
-document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const pages = document.querySelectorAll('.page');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const pageId = link.dataset.page;
-            if (pageId) {
-                e.preventDefault();
-
-                // Update active nav link
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-
-                // Update active page
-                pages.forEach(p => p.classList.remove('active'));
-                document.getElementById(`${pageId}-page`).classList.add('active');
-            }
-        });
-    });
-
-    // Handle CTA button clicks
-    document.querySelectorAll('[data-page]').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const pageId = button.dataset.page;
-            if (pageId && button.tagName === 'A' && !button.target) {
-                e.preventDefault();
-
-                // Update nav
-                navLinks.forEach(l => l.classList.remove('active'));
-                const targetNav = document.querySelector(`.nav-link[data-page="${pageId}"]`);
-                if (targetNav) targetNav.classList.add('active');
-
-                // Update page
-                pages.forEach(p => p.classList.remove('active'));
-                document.getElementById(`${pageId}-page`).classList.add('active');
-
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        });
-    });
-});
-
 // Project configuration - customize your projects here
 const projectCategories = {
     'Core Libraries': [
@@ -328,4 +283,52 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (firstAccordion) {
         firstAccordion.classList.add('active');
     }
+});
+
+// Page navigation
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const pages = document.querySelectorAll('.page');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const pageId = link.dataset.page;
+            if (pageId) {
+                e.preventDefault();
+
+                // Update active nav link
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // Update active page
+                pages.forEach(p => p.classList.remove('active'));
+                document.getElementById(`${pageId}-page`).classList.add('active');
+
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Handle CTA button clicks
+    document.querySelectorAll('.nav-trigger').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const pageId = button.dataset.page;
+            if (pageId) {
+                e.preventDefault();
+
+                // Update nav
+                navLinks.forEach(l => l.classList.remove('active'));
+                const targetNav = document.querySelector(`.nav-link[data-page="${pageId}"]`);
+                if (targetNav) targetNav.classList.add('active');
+
+                // Update page
+                pages.forEach(p => p.classList.remove('active'));
+                document.getElementById(`${pageId}-page`).classList.add('active');
+
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
 });
