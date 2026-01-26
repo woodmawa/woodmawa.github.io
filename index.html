@@ -21,11 +21,14 @@
 
 <nav>
     <div class="container">
-        <ul class="nav-menu">
-            <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-            <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
-            <li><a href="https://github.com/woodmawa" target="_blank">GitHub</a></li>
-        </ul>
+        <div class="nav-wrapper">
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
+                <li><a href="https://github.com/woodmawa" target="_blank">GitHub</a></li>
+            </ul>
+            <a href="#" class="btn btn-contact nav-link" data-page="contact">Contact Us</a>
+        </div>
     </div>
 </nav>
 
@@ -95,6 +98,62 @@
         </p>
         <div id="projectsContainer" class="loading">
             <p>Loading projects from GitHub...</p>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact-page" class="page">
+        <div class="intro">
+            <h2>Get In Touch</h2>
+            <p>
+                We'd love to hear from you! Whether you have questions about our projects, want to contribute,
+                or are interested in collaboration opportunities, feel free to reach out.
+            </p>
+
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <h3>📧 Email</h3>
+                    <p>
+                        <a href="mailto:will.woodman.softwood@outlook.com">contact @softwood.consulting</a>
+                    </p>
+                    <p class="contact-description">
+                        For general inquiries, project questions, or collaboration opportunities.
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>💻 GitHub</h3>
+                    <p>
+                        <a href="https://github.com/woodmawa" target="_blank">github.com/woodmawa</a>
+                    </p>
+                    <p class="contact-description">
+                        Browse our repositories, open issues, or submit pull requests.
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>🤝 Contribute</h3>
+                    <p>All our projects welcome contributions!</p>
+                    <p class="contact-description">
+                        Check out the contributing guidelines in each repository's README.
+                        We appreciate bug reports, feature requests, documentation improvements, and code contributions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>About Contributions</h3>
+                <p>
+                    We believe in the power of open source collaboration. Here's how you can get involved:
+                </p>
+                <ul class="contribution-list">
+                    <li><strong>Report Issues:</strong> Found a bug? Let us know by opening an issue on GitHub.</li>
+                    <li><strong>Suggest Features:</strong> Have an idea for improvement? We'd love to hear it.</li>
+                    <li><strong>Submit Pull Requests:</strong> Want to contribute code? Check our contribution guidelines.</li>
+                    <li><strong>Improve Documentation:</strong> Documentation improvements are always welcome.</li>
+                    <li><strong>Share Feedback:</strong> Your experience and feedback help us improve.</li>
+                </ul>
+            </div>
         </div>
     </section>
 </main>
