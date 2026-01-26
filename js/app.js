@@ -274,6 +274,7 @@ function initTabs() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', async () => {
+    // Load projects
     const githubRepos = await fetchGitHubRepos();
     const categories = mergeProjectData(githubRepos);
     renderProjects(categories);
@@ -283,10 +284,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (firstAccordion) {
         firstAccordion.classList.add('active');
     }
-});
 
-// Page navigation
-document.addEventListener('DOMContentLoaded', () => {
+    // Page navigation
     const navLinks = document.querySelectorAll('.nav-link');
     const pages = document.querySelectorAll('.page');
 
