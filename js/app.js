@@ -4,7 +4,8 @@ const projectCategories = {
         {
             name: 'grooy-HttpClient',
             repo: 'groovy-HttpClient',
-            description: 'Modern groovy http client, for java 25 + virtual threads, with DSL support and test framework ',
+            description: 'Modern groovy http client, for java 25 + virtual threads, with DSL support and test framework\n' +
+                'maven central co-ordinates \"io.github.woodmawa:groovy-httpclient:1.0.1 \"',
             features: [
                 'Java 21+ (compiled on Java 25)  ',
                 'Virtual threads for aysnc calls ',
