@@ -2,13 +2,17 @@
 const projectCategories = {
     'Core Libraries': [
         {
-            name: 'Your Core Library',
+            name: 'grooy-HttpClient',
             repo: 'core-lib',
-            description: 'Description of your core library project',
+            description: 'java 25 + virtual threads, groovy http client with DSL and test framework ',
             features: [
-                'Feature 1',
-                'Feature 2',
-                'Feature 3'
+                'Java 21+ (compiled on Java 25)  ',
+                'Virtual threads for aysnc calls ',
+                'SecurityConfig class and factory methods to setup security policy when calling the constructor '
+                'URL Builder to construct safe URLs '
+                'testing framework included '
+                'guidance on certificate management and supporting scripts '
+                'project documentation in /docs'
             ],
             documentation: 'Add documentation links and getting started guides here.'
         }
