@@ -4,7 +4,7 @@ const projectCategories = {
         {
             name: 'grooy-HttpClient',
             repo: 'groovy-HttpClient',
-            description: 'java 25 + virtual threads, groovy http client with DSL and test framework ',
+            description: 'Modern groovy http client, for java 25 + virtual threads, with DSL support and test framework ',
             features: [
                 'Java 21+ (compiled on Java 25)  ',
                 'Virtual threads for aysnc calls ',
@@ -14,7 +14,28 @@ const projectCategories = {
                 'guidance on certificate management and supporting scripts ',
                 'project documentation in /docs'
             ],
-            documentation: 'Add documentation links and getting started guides here.'
+            documentation: 'Modern Architecture\n' +
+                'Virtual Thread Executor — Handle millions of concurrent requests with minimal overhead (Java 21+)\n' +
+                'HTTP/2 Support — Automatic protocol negotiation with multiplexing\n' +
+                'Zero Magic — Wraps Java\'s standard HttpClient — no reflection, no bytecode manipulation\n' +
+                'Groovy-First Design\n' +
+                'Fluent DSL — Natural, expressive syntax for requests, headers, and multipart uploads\n' +
+                'Automatic JSON/XML Parsing — Built-in content-type aware response handling\n' +
+                'Closure-Based Configuration — Groovy-idiomatic request building\n' +
+                'Production-Ready Resilience\n' +
+                'Circuit Breaker — Automatic failure detection with CLOSED → OPEN → HALF_OPEN states\n' +
+                'Retry Policies — Exponential backoff with jitter for transient failures\n' +
+                'Request/Response Interceptors — Logging, metrics, and custom processing\n' +
+                'Security by Default\n' +
+                'Environment-Aware Profiles — testing(), development(), production() configurations\n' +
+                'SSRF Protection — Host allow-listing and absolute URL controls\n' +
+                'TLS Configuration — Custom trust stores, hostname verification, protocol selection\n' +
+                'Configurable Timeouts — Connect, request, and synchronous operation limits\n' +
+                'Comprehensive Testing Framework\n' +
+                'MockHttpServer — Lightweight, dependency-free embedded test server\n' +
+                'HttpClientTestDsl — Fluent DSL for endpoint mocking and verification\n' +
+                'HttpClientTestTrait — Spock trait for seamless test integration\n' +
+                'Request Recording — Rich assertions for headers, body, cookies, and query parameters'
         }
     ],
     'Tools & Utilities': [
