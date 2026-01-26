@@ -20,7 +20,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
     color: white;
     padding: 2rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -51,7 +51,7 @@ header {
 
 /* Navigation */
 nav {
-    background-color: #654321;
+    background-color: #1a3d0a;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -70,7 +70,7 @@ nav {
 }
 
 .nav-menu a:hover {
-    color: #D2691E;
+    color: #4a7c2c;
 }
 
 /* Main Content */
@@ -87,7 +87,7 @@ main {
 }
 
 .intro h2 {
-    color: #8B4513;
+    color: #2d5016;
     margin-bottom: 1rem;
     font-size: 2rem;
 }
@@ -98,13 +98,13 @@ main {
 }
 
 .intro a {
-    color: #D2691E;
+    color: #4a7c2c;
     font-weight: 600;
 }
 
 /* Projects Section */
 #projects h2 {
-    color: #8B4513;
+    color: #2d5016;
     margin-bottom: 2rem;
     font-size: 2rem;
 }
@@ -122,7 +122,7 @@ main {
 }
 
 .accordion-header {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    background: linear-gradient(135deg, #2d5016 0%, #3d6624 100%);
     color: white;
     padding: 1.5rem;
     cursor: pointer;
@@ -135,7 +135,7 @@ main {
 }
 
 .accordion-header:hover {
-    background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+    background: linear-gradient(135deg, #3d6624 0%, #2d5016 100%);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
@@ -195,12 +195,12 @@ main {
 }
 
 .tab-button:hover {
-    color: #8B4513;
+    color: #2d5016;
 }
 
 .tab-button.active {
-    color: #8B4513;
-    border-bottom-color: #8B4513;
+    color: #2d5016;
+    border-bottom-color: #2d5016;
     font-weight: 600;
 }
 
@@ -223,12 +223,12 @@ main {
     background: #f9f9f9;
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 4px solid #D2691E;
+    border-left: 4px solid #4a7c2c;
     margin-bottom: 1.5rem;
 }
 
 .project-card h4 {
-    color: #8B4513;
+    color: #2d5016;
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
 }
@@ -262,7 +262,7 @@ main {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #8B4513;
+    background: #2d5016;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -271,15 +271,15 @@ main {
 }
 
 .btn:hover {
-    background: #A0522D;
+    background: #3d6624;
 }
 
 .btn-secondary {
-    background: #654321;
+    background: #1a3d0a;
 }
 
 .btn-secondary:hover {
-    background: #8B4513;
+    background: #2d5016;
 }
 
 /* Footer */
@@ -292,7 +292,7 @@ footer {
 }
 
 footer a {
-    color: #D2691E;
+    color: #4a7c2c;
     text-decoration: none;
 }
 
