@@ -8,10 +8,10 @@ const projectCategories = {
             features: [
                 'Java 21+ (compiled on Java 25)  ',
                 'Virtual threads for aysnc calls ',
-                'SecurityConfig class and factory methods to setup security policy when calling the constructor '
-                'URL Builder to construct safe URLs '
-                'testing framework included '
-                'guidance on certificate management and supporting scripts '
+                'SecurityConfig class and factory methods to setup security policy when calling the constructor ',
+                'URL Builder to construct safe URLs ',
+                'testing framework included ',
+                'guidance on certificate management and supporting scripts ',
                 'project documentation in /docs'
             ],
             documentation: 'Add documentation links and getting started guides here.'
