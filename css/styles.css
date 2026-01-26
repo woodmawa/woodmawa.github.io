@@ -529,3 +529,100 @@ footer a:hover {
         text-align: center;
     }
 }
+
+/* Blog Page */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #4a7c2c;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.blog-post-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.blog-post-header h3 {
+    color: #2d5016;
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+}
+
+.blog-date {
+    color: #666;
+}
+
+.blog-category {
+    background: #4a7c2c;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.blog-content h4 {
+    color: #2d5016;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.blog-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.blog-content ul {
+    margin: 1rem 0 1rem 2rem;
+    line-height: 1.8;
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-content code {
+    background: #f5f5f5;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #2d5016;
+}
+
+.blog-content .btn {
+    margin-top: 1rem;
+}
+
+.blog-content a:not(.btn) {
+    color: #4a7c2c;
+    font-weight: 600;
+}
+
+.blog-content a:not(.btn):hover {
+    text-decoration: underline;
+}
