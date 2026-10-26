@@ -1,243 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Softwood Consulting - Open Source Projects</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<header>
-    <div class="container">
-        <div class="header-content">
-            <img src="./images/softwood_logo.png" alt="Softwood Logo" class="logo">
-            <div class="header-text">
-                <h1>Softwood Consulting</h1>
-                <p class="tagline">Open Source Innovation in Groovy & Beyond</p>
-            </div>
-        </div>
+---
+layout: default
+nav: home
+---
+<section id="home-page">
+    <div class="banner-container">
+        <img src="{{ '/images/banner-image.png' | relative_url }}" alt="Softwood Consulting Banner" class="banner-image">
     </div>
-</header>
 
-<nav>
-    <div class="container">
-        <div class="nav-wrapper">
-            <ul class="nav-menu">
-                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
-                <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
-                <li><a href="#" class="nav-link" data-page="blog">Blog</a></li>
-                <li><a href="https://github.com/woodmawa" target="_blank">GitHub</a></li>
-            </ul>
-            <a href="#" class="btn btn-contact nav-link" data-page="contact">Contact Us</a>
-        </div>
-    </div>
-</nav>
-
-<main class="container">
-    <!-- Home Page -->
-    <section id="home-page" class="page active">
-        <div class="banner-container">
-            <img src="./images/banner-image.png" alt="Softwood Consulting Banner" class="banner-image">
-        </div>
-
-        <div class="intro">
-            <h2>About Softwood Consulting</h2>
-            <p>
-                Softwood Consulting specializes in building elegant, maintainable open source solutions
-                using Groovy and modern JVM technologies. We believe in the power of open source software
-                to solve real-world problems while fostering collaboration and innovation.
-            </p>
-
-            <h3>What We Do</h3>
-            <div class="services">
-                <div class="service-card">
-                    <h4>🚀 Open Source Development</h4>
-                    <p>Creating high-quality libraries, frameworks, and tools that empower developers to build better software faster.</p>
-                </div>
-
-                <div class="service-card">
-                    <h4>💻 Groovy Expertise</h4>
-                    <p>Leveraging Groovy's dynamic capabilities and Java interoperability to create powerful, concise solutions.</p>
-                </div>
-
-                <div class="service-card">
-                    <h4>🔧 Modern JVM Tools</h4>
-                    <p>Embracing cutting-edge JVM features like virtual threads, records, and pattern matching for optimal performance.</p>
-                </div>
-
-                <div class="service-card">
-                    <h4>📚 Documentation & Support</h4>
-                    <p>Comprehensive documentation, examples, and community support for all our projects.</p>
-                </div>
-            </div>
-
-            <h3>Our Approach</h3>
-            <p>
-                Every project we create is designed with clarity, maintainability, and real-world usability in mind.
-                We focus on solving genuine problems that developers face, backed by solid engineering principles
-                and thorough testing.
-            </p>
-
-            <p>
-                All our projects are freely available on <a href="https://github.com/woodmawa" target="_blank">GitHub</a>
-                under open source licenses. We welcome contributions, feedback, and collaboration from the community.
-            </p>
-
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-large nav-trigger" data-page="projects">Explore Our Projects</a>
-                <a href="https://github.com/woodmawa" target="_blank" class="btn btn-secondary btn-large">Visit Our GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Page -->
-    <section id="projects-page" class="page">
-        <h2>Featured Projects</h2>
-        <p class="page-description">
-            Explore our collection of open source projects. Each project includes detailed documentation,
-            examples, and active maintenance. Click on any category to learn more.
-        </p>
-        <div id="projectsContainer" class="loading">
-            <p>Loading projects from GitHub...</p>
-        </div>
-    </section>
-
-    <!-- Contact Page -->
-    <section id="contact-page" class="page">
-        <div class="intro">
-            <h2>Get In Touch</h2>
-            <p>
-                We'd love to hear from you! Whether you have questions about our projects, want to contribute,
-                or are interested in collaboration opportunities, feel free to reach out.
-            </p>
-
-            <div class="contact-methods">
-                <div class="contact-card">
-                    <h3>📧 Email</h3>
-                    <p>
-                        <a href="mailto:will.woodman.softwood@outlook.com">contact will.woodman.softwood@outlook.com</a>
-                    </p>
-                    <p class="contact-description">
-                        For general inquiries, project questions, or collaboration opportunities.
-                    </p>
-                </div>
-
-                <div class="contact-card">
-                    <h3>💻 GitHub</h3>
-                    <p>
-                        <a href="https://github.com/woodmawa" target="_blank">github.com/woodmawa</a>
-                    </p>
-                    <p class="contact-description">
-                        Browse our repositories, open issues, or submit pull requests.
-                    </p>
-                </div>
-
-                <div class="contact-card">
-                    <h3>🤝 Contribute</h3>
-                    <p>All our projects welcome contributions!</p>
-                    <p class="contact-description">
-                        Check out the contributing guidelines in each repository's README.
-                        We appreciate bug reports, feature requests, documentation improvements, and code contributions.
-                    </p>
-                </div>
-            </div>
-
-            <div class="contact-info">
-                <h3>About Contributions</h3>
-                <p>
-                    We believe in the power of open source collaboration. Here's how you can get involved:
-                </p>
-                <ul class="contribution-list">
-                    <li><strong>Report Issues:</strong> Found a bug? Let us know by opening an issue on GitHub.</li>
-                    <li><strong>Suggest Features:</strong> Have an idea for improvement? We'd love to hear it.</li>
-                    <li><strong>Submit Pull Requests:</strong> Want to contribute code? Check our contribution guidelines.</li>
-                    <li><strong>Improve Documentation:</strong> Documentation improvements are always welcome.</li>
-                    <li><strong>Share Feedback:</strong> Your experience and feedback help us improve.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Page -->
-    <section id="blog-page" class="page">
-        <h2>News & Updates</h2>
-        <p class="page-description">
-            Stay updated with the latest news, releases, and insights from Softwood Consulting.
-        </p>
-
-        <div class="blog-posts">
-            <!-- Blog Post 1 -->
-            <article class="blog-post">
-                <div class="blog-post-header">
-                    <h3>Groovy HttpClient 1.0.2 Released</h3>
-                    <div class="blog-meta">
-                        <span class="blog-date">📅 January 26, 2026</span>
-                        <span class="blog-category">Release</span>
-                    </div>
-                </div>
-                <div class="blog-content">
-                    <p>
-                        We're excited to announce the release of Groovy HttpClient 1.0.2! This release brings
-                        improved virtual thread support, enhanced security features, and better test framework integration.
-                    </p>
-                    <h4>Key Updates:</h4>
-                    <ul>
-                        <li>Enhanced virtual thread executor for Java 21+</li>
-                        <li>Improved circuit breaker implementation</li>
-                        <li>New retry policy with exponential backoff</li>
-                        <li>Expanded test DSL capabilities</li>
-                    </ul>
-                    <p>
-                        Available now on Maven Central: <code>io.github.woodmawa:groovy-httpclient:1.0.2</code>
-                    </p>
-                    <a href="https://github.com/woodmawa/groovy-HttpClient" target="_blank" class="btn">View on GitHub</a>
-                </div>
-            </article>
-
-            <!-- Blog Post 2 - Template for future posts -->
-            <article class="blog-post">
-                <div class="blog-post-header">
-                    <h3>Welcome to Softwood Consulting</h3>
-                    <div class="blog-meta">
-                        <span class="blog-date">📅 January 2026</span>
-                        <span class="blog-category">Announcement</span>
-                    </div>
-                </div>
-                <div class="blog-content">
-                    <p>
-                        Welcome to the Softwood Consulting open source project showcase! We're dedicated to building
-                        high-quality, maintainable solutions using Groovy and modern JVM technologies.
-                    </p>
-                    <p>
-                        Our focus is on creating tools and libraries that solve real-world problems while maintaining
-                        code quality and developer experience. All our projects are freely available under open source licenses.
-                    </p>
-                    <h4>What to Expect:</h4>
-                    <ul>
-                        <li>Regular project updates and new releases</li>
-                        <li>Technical deep-dives and tutorials</li>
-                        <li>Community highlights and contributions</li>
-                        <li>Best practices and lessons learned</li>
-                    </ul>
-                    <p>
-                        Follow our <a href="https://github.com/woodmawa" target="_blank">GitHub</a> for the latest updates!
-                    </p>
-                </div>
-            </article>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="container">
-        <p>&copy; 2026 Softwood Consulting. All rights reserved.</p>
+    <div class="intro">
+        <h2>About Softwood Consulting</h2>
         <p>
-            <a href="https://github.com/woodmawa" target="_blank">GitHub</a> |
-            <a href="mailto:will.woodman.softwood@outlook.com">Contact</a>
+            Softwood Consulting specializes in building elegant, maintainable open source solutions
+            using Groovy and modern JVM technologies. We believe in the power of open source software
+            to solve real-world problems while fostering collaboration and innovation.
         </p>
-    </div>
-</footer>
 
-<script src="js/app.js"></script>
-</body>
-</html>
+        <h3>What We Do</h3>
+        <div class="services">
+            <div class="service-card">
+                <h4>🚀 Open Source Development</h4>
+                <p>Creating high-quality libraries, frameworks, and tools that empower developers to build better software faster.</p>
+            </div>
+
+            <div class="service-card">
+                <h4>💻 Groovy Expertise</h4>
+                <p>Leveraging Groovy's dynamic capabilities and Java interoperability to create powerful, concise solutions.</p>
+            </div>
+
+            <div class="service-card">
+                <h4>🔧 Modern JVM Tools</h4>
+                <p>Embracing cutting-edge JVM features like virtual threads, records, and pattern matching for optimal performance.</p>
+            </div>
+
+            <div class="service-card">
+                <h4>📚 Documentation & Support</h4>
+                <p>Comprehensive documentation, examples, and community support for all our projects.</p>
+            </div>
+        </div>
+
+        <h3>Our Approach</h3>
+        <p>
+            Every project we create is designed with clarity, maintainability, and real-world usability in mind.
+            We focus on solving genuine problems that developers face, backed by solid engineering principles
+            and thorough testing.
+        </p>
+
+        <p>
+            All our projects are freely available on <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+            under open source licenses. We welcome contributions, feedback, and collaboration from the community.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="{{ '/projects/' | relative_url }}" class="btn btn-large">Explore Our Projects</a>
+            <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" class="btn btn-secondary btn-large">Visit Our GitHub</a>
+        </div>
+    </div>
+
+    {%- if site.posts.size > 0 %}
+    <div class="latest-posts">
+        <h3>Latest News</h3>
+        <div class="blog-posts">
+            {%- for post in site.posts limit: 3 %}
+            {% include post-card.html post=post %}
+            {%- endfor %}
+        </div>
+        <p class="more-link"><a href="{{ '/blog/' | relative_url }}">All news &amp; updates &rarr;</a></p>
+    </div>
+    {%- endif %}
+</section>

@@ -1,0 +1,21 @@
+---
+layout: default
+nav: blog
+title: News & Updates
+description: Releases, news and technical notes from Softwood Consulting.
+---
+<section id="blog-page">
+    <h2>News &amp; Updates</h2>
+    <p class="page-description">
+        Releases, news and technical notes from Softwood Consulting.
+        Subscribe with the <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>.
+    </p>
+
+    <div class="blog-posts">
+        {%- for post in site.posts %}
+        {% include post-card.html post=post %}
+        {%- else %}
+        <p class="loading">No posts yet. Check back soon!</p>
+        {%- endfor %}
+    </div>
+</section>

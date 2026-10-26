@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% seo %}
+    {% feed_meta %}
+    <link rel="icon" href="{{ '/images/softwood_logo.png' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a href="{{ '/' | relative_url }}"><img src="{{ '/images/softwood_logo.png' | relative_url }}" alt="Softwood Logo" class="logo"></a>
+            <div class="header-text">
+                <h1>{{ site.title }}</h1>
+                <p class="tagline">{{ site.tagline }}</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <div class="nav-wrapper">
+            <ul class="nav-menu">
+                <li><a href="{{ '/' | relative_url }}" class="nav-link{% if page.nav == 'home' %} active{% endif %}">Home</a></li>
+                <li><a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.nav == 'projects' %} active{% endif %}">Projects</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}" class="nav-link{% if page.nav == 'blog' %} active{% endif %}">Blog</a></li>
+                <li><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+            <a href="{{ '/contact/' | relative_url }}" class="btn btn-contact nav-link{% if page.nav == 'contact' %} active{% endif %}">Contact Us</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+{{ content }}
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        <p>
+            <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a> |
+            <a href="{{ '/feed.xml' | relative_url }}">RSS</a> |
+            <a href="mailto:{{ site.author.email }}">Contact</a>
+        </p>
+    </div>
+</footer>
+
+<script src="{{ '/js/app.js' | relative_url }}"></script>
+</body>
+</html>

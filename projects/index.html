@@ -1,0 +1,101 @@
+---
+layout: default
+nav: projects
+title: Projects
+description: Open source Groovy and JVM projects from Softwood Consulting.
+---
+<section id="projects-page">
+    <h2>Featured Projects</h2>
+    <p class="page-description">
+        Explore our open source projects. Each one has documentation, examples and news;
+        open a category to see its projects.
+    </p>
+
+    <div id="projectsContainer">
+        {%- assign groups = site.data.projects | group_by: "category" %}
+        {%- for group in groups %}
+        <div class="accordion{% if forloop.first %} active{% endif %}">
+            <div class="accordion-header">
+                <h3>{{ group.name }}</h3>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                {%- for project in group.items %}
+                    {%- assign news = site.posts | where: "project", project.repo %}
+                    <div class="project-card" id="{{ project.repo }}" data-repo="{{ project.repo }}">
+                        <h4>{{ project.name }}{% if project.version %} <span class="project-version">{{ project.version }}</span>{% endif %}</h4>
+                        <div class="project-meta">
+                            <span class="meta-item meta-stars" hidden>⭐ <span class="value"></span> stars</span>
+                            <span class="meta-item meta-language" hidden>💻 <span class="value"></span></span>
+                            <span class="meta-item meta-updated" hidden>📅 Updated <span class="value"></span></span>
+                        </div>
+
+                        <div class="tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="overview-{{ project.repo }}">Overview</button>
+                                <button class="tab-button" data-tab="features-{{ project.repo }}">Features</button>
+                                <button class="tab-button" data-tab="docs-{{ project.repo }}">Documentation</button>
+                                {%- if news.size > 0 %}
+                                <button class="tab-button" data-tab="news-{{ project.repo }}">News ({{ news.size }})</button>
+                                {%- endif %}
+                            </div>
+
+                            <div class="tab-content active" id="overview-{{ project.repo }}">
+                                <p class="project-description">{{ project.summary }}</p>
+                                {%- if project.coordinates %}
+                                <p>Maven Central: <code>{{ project.coordinates }}</code></p>
+                                {%- endif %}
+                                {%- if project.requirements %}
+                                <p class="project-requirements">Requires {{ project.requirements }}</p>
+                                {%- endif %}
+                                <div class="project-links">
+                                    <a href="https://github.com/{{ site.github_username }}/{{ project.repo }}" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+                                    {%- if project.central %}
+                                    <a href="{{ project.central }}" target="_blank" rel="noopener" class="btn btn-secondary">Maven Central</a>
+                                    {%- endif %}
+                                </div>
+                            </div>
+
+                            <div class="tab-content" id="features-{{ project.repo }}">
+                                <ul>
+                                    {%- for feature in project.features %}
+                                    <li>{{ feature }}</li>
+                                    {%- endfor %}
+                                </ul>
+                            </div>
+
+                            <div class="tab-content" id="docs-{{ project.repo }}">
+                                <ul class="doc-links">
+                                    {%- for doc in project.docs %}
+                                    <li><a href="{{ doc.url }}" target="_blank" rel="noopener">{{ doc.title }}</a></li>
+                                    {%- else %}
+                                    <li><a href="https://github.com/{{ site.github_username }}/{{ project.repo }}#readme" target="_blank" rel="noopener">README</a></li>
+                                    {%- endfor %}
+                                </ul>
+                            </div>
+
+                            {%- if news.size > 0 %}
+                            <div class="tab-content" id="news-{{ project.repo }}">
+                                <ul class="project-news">
+                                    {%- for post in news %}
+                                    <li>
+                                        <span class="blog-date">{{ post.date | date: "%-d %b %Y" }}</span>
+                                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                                    </li>
+                                    {%- endfor %}
+                                </ul>
+                            </div>
+                            {%- endif %}
+                        </div>
+                    </div>
+                {%- endfor %}
+                </div>
+            </div>
+        </div>
+        {%- endfor %}
+
+        <!-- Public repos not listed in _data/projects.yml are added here by js/app.js -->
+        <div id="otherProjects"></div>
+    </div>
+</section>

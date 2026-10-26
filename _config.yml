@@ -1,0 +1,50 @@
+# Softwood Consulting site -- built by GitHub Pages (Jekyll) on every push to main.
+# Local preview: bundle install, then bundle exec jekyll serve  ->  http://localhost:4000
+# Changes to this file need a restart of `jekyll serve`.
+
+title: Softwood Consulting
+tagline: Open Source Innovation in Groovy & Beyond
+description: >-
+  Softwood Consulting builds maintainable open source libraries for Groovy and the JVM,
+  including groovy-HttpClient.
+url: https://woodmawa.github.io
+baseurl: ""
+lang: en_GB
+author:
+  name: Will Woodman
+  email: will.woodman.softwood@outlook.com
+github_username: woodmawa
+
+# Posts live in _posts/YYYY-MM-DD-slug.md and are served at /blog/YYYY/slug/
+permalink: /blog/:year/:title/
+timezone: Europe/London
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins GitHub Pages runs without a custom workflow
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav: blog
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - vendor/

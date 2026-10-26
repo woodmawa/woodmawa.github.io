@@ -626,3 +626,224 @@ footer a:hover {
 .blog-content a:not(.btn):hover {
     text-decoration: underline;
 }
+
+
+/* ---- Jekyll pages: posts, post links, project news ---- */
+
+.nav-menu a.active,
+.nav-menu a.nav-link.active {
+    color: #c8e6b0;
+}
+
+.blog-post-header h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog-post-header h3 a:hover {
+    text-decoration: underline;
+}
+
+.blog-project {
+    color: #2d5016;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.blog-project:hover {
+    text-decoration: underline;
+}
+
+/* Single post */
+.post-full .blog-post-header h2 {
+    color: #2d5016;
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+.post-full:hover {
+    transform: none;
+}
+
+.post-back {
+    margin-bottom: 0.75rem;
+}
+
+.post-back a,
+.post-nav a,
+.more-link a {
+    color: #4a7c2c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.post-back a:hover,
+.post-nav a:hover,
+.more-link a:hover {
+    text-decoration: underline;
+}
+
+.blog-content h2 {
+    color: #2d5016;
+    font-size: 1.5rem;
+    margin: 2rem 0 0.75rem;
+}
+
+.blog-content h3 {
+    color: #2d5016;
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+}
+
+.blog-content blockquote {
+    border-left: 4px solid #c8e6b0;
+    background: #f6faf2;
+    padding: 0.75rem 1rem;
+    margin: 1.5rem 0;
+    color: #444;
+}
+
+.blog-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Code blocks (kramdown + rouge) */
+.blog-content pre,
+.blog-content div.highlight {
+    background: #1e2a17;
+    color: #e8f0e0;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1rem 0 1.5rem;
+}
+
+.blog-content pre {
+    padding: 1rem 1.25rem;
+    line-height: 1.5;
+}
+
+.blog-content div.highlight pre {
+    margin: 0;
+}
+
+.blog-content pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.highlight .c, .highlight .c1, .highlight .cm { color: #8fa882; font-style: italic; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kt { color: #f0c674; }
+.highlight .s, .highlight .s1, .highlight .s2 { color: #b5e08a; }
+.highlight .m, .highlight .mi { color: #e6a26b; }
+.highlight .nt, .highlight .na { color: #8cc4e8; }
+
+.post-project {
+    background: #f6faf2;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.post-project h4 {
+    color: #2d5016;
+    margin-bottom: 0.5rem;
+}
+
+.post-project p {
+    margin-bottom: 0.75rem;
+}
+
+.post-project code {
+    background: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    color: #2d5016;
+}
+
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+/* Home: latest news */
+.latest-posts h3 {
+    color: #2d5016;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.more-link {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Projects page */
+.project-version {
+    background: #4a7c2c;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+.project-card {
+    scroll-margin-top: 1rem;
+}
+
+.project-card code {
+    background: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    color: #2d5016;
+}
+
+.project-requirements {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.tab-content ul {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.doc-links a,
+.project-news a {
+    color: #4a7c2c;
+    font-weight: 600;
+}
+
+.project-news {
+    list-style: none;
+    margin-left: 0 !important;
+}
+
+.project-news li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.4rem 0;
+}
+
+.project-news .blog-date {
+    min-width: 7rem;
+}
+
+@media (max-width: 768px) {
+    .post-nav {
+        flex-direction: column;
+    }
+
+    .post-full .blog-post-header h2 {
+        font-size: 1.7rem;
+    }
+}

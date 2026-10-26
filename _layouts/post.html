@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- assign proj = site.data.projects | where: "repo", page.project | first -%}
+<article class="blog-post post-full">
+    <div class="blog-post-header">
+        <p class="post-back"><a href="{{ '/blog/' | relative_url }}">&larr; All posts</a></p>
+        <h2>{{ page.title }}</h2>
+        <div class="blog-meta">
+            <span class="blog-date">📅 {{ page.date | date: "%-d %B %Y" }}</span>
+            {%- if page.category %}<span class="blog-category">{{ page.category }}</span>{% endif %}
+            {%- if proj %}<a class="blog-project" href="{{ '/projects/' | relative_url }}#{{ proj.repo }}">📦 {{ proj.name }}</a>{% endif %}
+        </div>
+    </div>
+
+    <div class="blog-content">
+        {{ content }}
+    </div>
+
+    {%- if proj %}
+    <aside class="post-project">
+        <h4>About {{ proj.name }}</h4>
+        <p>{{ proj.summary }}</p>
+        {%- if proj.coordinates %}
+        <p>Latest release: <code>{{ proj.coordinates }}</code></p>
+        {%- endif %}
+        <div class="project-links">
+            <a href="{{ '/projects/' | relative_url }}#{{ proj.repo }}" class="btn">Project page</a>
+            <a href="https://github.com/{{ site.github_username }}/{{ proj.repo }}" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+        </div>
+    </aside>
+    {%- endif %}
+
+    <nav class="post-nav">
+        {%- if page.previous %}<a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+        {%- if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>{% endif %}
+    </nav>
+</article>

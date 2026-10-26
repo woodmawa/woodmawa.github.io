@@ -1,0 +1,19 @@
+{%- comment -%}
+  Summary card for one post. Usage: {% include post-card.html post=post %}
+{%- endcomment -%}
+{%- assign p = include.post -%}
+{%- assign proj = site.data.projects | where: "repo", p.project | first -%}
+<article class="blog-post blog-summary">
+    <div class="blog-post-header">
+        <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+        <div class="blog-meta">
+            <span class="blog-date">📅 {{ p.date | date: "%-d %B %Y" }}</span>
+            {%- if p.category %}<span class="blog-category">{{ p.category }}</span>{% endif %}
+            {%- if proj %}<a class="blog-project" href="{{ '/projects/' | relative_url }}#{{ proj.repo }}">📦 {{ proj.name }}</a>{% endif %}
+        </div>
+    </div>
+    <div class="blog-content">
+        <p>{{ p.excerpt | strip_html | strip | truncatewords: 45 }}</p>
+        <a href="{{ p.url | relative_url }}" class="btn">Read more</a>
+    </div>
+</article>
