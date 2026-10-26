@@ -1,8 +1,10 @@
 ---
 title: Groovy HttpClient 1.0.2 Released
 date: 2026-01-26 12:00:00 +0000
+published: true
 category: Release
 project: groovy-HttpClient
+description: library update for groovyv6 and new features and HTTP v3 support
 ---
 
 We're excited to announce the release of Groovy HttpClient 1.0.2! This release brings
