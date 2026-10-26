@@ -31,6 +31,6 @@
     - title: README and quick start
       url: https://github.com/woodmawa/groovy-HttpClient#readme
     - title: User guide (PDF)
-      url: https://github.com/woodmawa/groovy-HttpClient/blob/master/docs/groovy-httpclient-user-guide.pdf
+      url: https://woodmawa.github.io/downloads/groovy-httpclient/groovy-httpclient-user-guide-2.1.0.pdf
     - title: SSL certificate guide
       url: https://github.com/woodmawa/groovy-HttpClient/blob/master/SSL_CERTIFICATE_GUIDE.md

@@ -3,6 +3,10 @@ title: groovy-HttpClient 2.1.0 released
 date: 2026-10-26 13:30:00 +0000
 category: Release
 project: groovy-HttpClient
+downloads:
+  - title: User guide 2.1.0 (PDF)
+    file: /downloads/groovy-httpclient/groovy-httpclient-user-guide-2.1.0.pdf
+    note: 3 MB, from first request to advanced configuration
 description: groovy-HttpClient 2.1.0 is on Maven Central -- Groovy 6, Java 25, HTTP/3, secure defaults, codecs, streaming, auth and published test fixtures.
 ---
 
@@ -80,7 +84,7 @@ sections.
 
 ## Documentation
 
-- [User guide (PDF)](https://github.com/woodmawa/groovy-HttpClient/blob/master/docs/groovy-httpclient-user-guide.pdf) --
+- [User guide (PDF)]({{ '/downloads/groovy-httpclient/groovy-httpclient-user-guide-2.1.0.pdf' | relative_url }}) --
   rewritten for 2.1, from first request to advanced configuration
 - [README](https://github.com/woodmawa/groovy-HttpClient#readme) -- installation and a tour of every feature
 - [SSL certificate guide](https://github.com/woodmawa/groovy-HttpClient/blob/master/SSL_CERTIFICATE_GUIDE.md) --

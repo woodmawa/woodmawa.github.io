@@ -13,6 +13,21 @@ layout: default
         </div>
     </div>
 
+    {%- if page.downloads.size > 0 %}
+    <aside class="post-downloads">
+        <h4>Downloads</h4>
+        <ul>
+            {%- for d in page.downloads %}
+            {%- assign href = d.file %}{% unless href contains '://' %}{% assign href = d.file | relative_url %}{% endunless %}
+            <li>
+                <a href="{{ href }}" class="btn" download>&#11015; {{ d.title }}</a>
+                {%- if d.note %}<span class="download-note">{{ d.note }}</span>{% endif %}
+            </li>
+            {%- endfor %}
+        </ul>
+    </aside>
+    {%- endif %}
+
     <div class="blog-content">
         {{ content }}
     </div>

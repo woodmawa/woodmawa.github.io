@@ -68,6 +68,28 @@ collections:
         widget: text
         required: false
         hint: One sentence for search engines and link previews.
+      - name: downloads
+        label: Downloads
+        label_singular: Download
+        widget: list
+        required: false
+        summary: "{{title}}"
+        hint: Files shown as download buttons at the top of the post, e.g. a user guide PDF.
+        fields:
+          - name: title
+            label: Button text
+            widget: string
+          - name: file
+            label: File
+            widget: file
+            media_folder: /downloads
+            public_folder: /downloads
+            hint: Upload a file, or paste a full URL to a file hosted elsewhere.
+          - name: note
+            label: Note
+            widget: string
+            required: false
+            hint: Short text after the button, e.g. size or what it covers.
       - name: body
         label: Body
         widget: markdown
