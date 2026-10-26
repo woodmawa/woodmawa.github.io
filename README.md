@@ -6,7 +6,20 @@ It is a [Jekyll](https://jekyllrb.com/) site built by GitHub Pages: push to `mai
 within a minute or two. Build status and errors show under the repository's **Actions** tab
 ("pages build and deployment").
 
-## Add a blog post
+## Admin page (no local tools needed)
+
+<https://woodmawa.github.io/admin/> runs [Sveltia CMS](https://sveltiacms.app/), configured in
+`admin/config.yml`. It lists, creates, edits and deletes blog posts, edits the project list, and uploads
+images to `images/uploads/`. Every save is a commit to `main`, so the site rebuilds a minute or two later.
+A post with **Published** switched off stays in the repo but is not shown on the site.
+
+Sign in with **Sign In with Token**, using a fine-grained GitHub personal access token:
+Repository access *Only select repositories* -> `woodmawa.github.io`, permission *Contents: Read and write*.
+The token is kept in that browser's local storage; use **Sign Out** on shared machines, and revoke the token
+at <https://github.com/settings/tokens> if a device is lost. Anyone else who opens `/admin/` sees only the
+sign-in screen, because GitHub refuses writes without access to this repo.
+
+## Add a blog post by hand
 
 Create `_posts/YYYY-MM-DD-short-slug.md`:
 

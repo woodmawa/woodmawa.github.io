@@ -1,0 +1,144 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+# Sveltia CMS configuration for https://woodmawa.github.io/admin/
+# Every save is a commit to main; GitHub Pages rebuilds the site a minute or two later.
+
+backend:
+  name: github
+  repo: woodmawa/woodmawa.github.io
+  branch: main
+  auth_methods: [token]
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}" (via admin)'
+    update: 'Update {{collection}} "{{slug}}" (via admin)'
+    delete: 'Delete {{collection}} "{{slug}}" (via admin)'
+    uploadMedia: 'Upload "{{path}}" (via admin)'
+    deleteMedia: 'Delete "{{path}}" (via admin)'
+
+site_url: https://woodmawa.github.io
+display_url: https://woodmawa.github.io
+logo:
+  src: /images/softwood_logo.png
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: posts
+    label: Blog posts
+    label_singular: Post
+    description: News and updates shown on /blog/ and the home page.
+    folder: _posts
+    extension: md
+    format: frontmatter
+    create: true
+    delete: true
+    slug: "{{date | date('YYYY-MM-DD')}}-{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: date
+        label: Date
+        widget: datetime
+        format: YYYY-MM-DD HH:mm:ss ZZ
+        input_timezone: Europe/London
+        default: "{{now}}"
+        hint: A post dated in the future does not appear until a later rebuild after that time.
+      - name: published
+        label: Published
+        widget: boolean
+        default: true
+        required: false
+        hint: Switch off to keep the post as a draft. It stays in the repository but is not shown on the site.
+      - name: category
+        label: Category
+        widget: select
+        options: [Release, Announcement, Article, Tutorial, News]
+        default: Article
+        required: false
+      - name: project
+        label: Project
+        widget: string
+        required: false
+        hint: "Optional. The repo name of a project on the Projects page, e.g. groovy-HttpClient. Links the post and the project to each other."
+      - name: description
+        label: Description
+        widget: text
+        required: false
+        hint: One sentence for search engines and link previews.
+      - name: body
+        label: Body
+        widget: markdown
+        hint: The first paragraph is the excerpt shown on the home page and blog list.
+
+  - name: data
+    label: Site data
+    description: The project list shown on /projects/. Projects with the same category share a heading.
+    files:
+      - name: projects
+        label: Projects
+        file: _data/projects.yml
+        fields:
+          - name: projects
+            label: Projects
+            label_singular: Project
+            widget: list
+            root: true
+            summary: "{{name}} {{version}} ({{category}})"
+            collapsed: true
+            fields:
+              - name: repo
+                label: GitHub repository
+                widget: string
+                hint: Exact repository name under github.com/woodmawa, e.g. groovy-HttpClient. Posts link to a project by this name.
+              - name: name
+                label: Display name
+                widget: string
+              - name: category
+                label: Category
+                widget: string
+                hint: Accordion heading, e.g. Core Libraries.
+              - name: version
+                label: Latest version
+                widget: string
+                required: false
+              - name: coordinates
+                label: Maven coordinates
+                widget: string
+                required: false
+                hint: e.g. io.github.woodmawa:groovy-httpclient:2.1.0
+              - name: central
+                label: Maven Central URL
+                widget: string
+                required: false
+              - name: summary
+                label: Summary
+                widget: text
+              - name: requirements
+                label: Requirements
+                widget: string
+                required: false
+              - name: features
+                label: Features
+                label_singular: Feature
+                widget: list
+                required: false
+                field:
+                  name: feature
+                  label: Feature
+                  widget: string
+              - name: docs
+                label: Documentation links
+                label_singular: Link
+                widget: list
+                required: false
+                summary: "{{title}}"
+                fields:
+                  - name: title
+                    label: Title
+                    widget: string
+                  - name: url
+                    label: URL
+                    widget: string
